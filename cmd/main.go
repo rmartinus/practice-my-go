@@ -18,4 +18,11 @@ func main() {
 	fmt.Println("Area of rectangle:", r.Area())
 	r.ScaleBy(3)
 	fmt.Println("Rectangle scaled by 3:", r)
+
+	c := shape.Cube{3}
+	fmt.Println("Cube:", c)
+	fmt.Println("Area of cube:", c.Area())
+	fmt.Println("Volume of cube:", c.Volume())
+	c.ScaleBy(4)
+	fmt.Println("Cube scaled by 4:", c)
 }
