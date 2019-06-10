@@ -3,10 +3,16 @@ package main
 import (
 	"fmt"
 
+	"github.com/rmartinus/practice-my-go/pkg/geometry"
 	"github.com/rmartinus/practice-my-go/pkg/shape"
 )
 
 func main() {
+	p := geometry.Point{1, 2}
+	q := geometry.Point{4, 6}
+	fmt.Println("Distance using func:", geometry.Distance(p, q))
+	fmt.Println("Distance using method:", p.Distance(q))
+
 	s := shape.Square{5}
 	fmt.Println("Square:", s)
 	fmt.Println("Area of square:", s.Area())
