@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/rmartinus/practice-my-go/pkg/algorithm"
 	"github.com/rmartinus/practice-my-go/pkg/geometry"
 	"github.com/rmartinus/practice-my-go/pkg/shape"
 )
@@ -31,4 +32,10 @@ func main() {
 	fmt.Println("Volume of cube:", c.Volume())
 	c.ScaleBy(4)
 	fmt.Println("Cube scaled by 4:", c)
+
+	resultLinear := algorithm.LinearSearch([]int{8, 4, 5, 9, 2, 15, 23, 10}, 15)
+	fmt.Println("resultLinear", resultLinear)
+
+	resultBinary := algorithm.BinarySearch([]int{2, 4, 5, 8, 9, 10, 15, 23}, 15)
+	fmt.Println("resultBinary", resultBinary)
 }
