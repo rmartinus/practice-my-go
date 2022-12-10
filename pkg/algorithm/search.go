@@ -1,7 +1,11 @@
 package algorithm
 
+type Number interface {
+	int | int8 | int16 | int32 | int64 | float32 | float64
+}
+
 // LinearSearch searches an item linearly
-func LinearSearch(items []int, searchItem int) int {
+func LinearSearch[T Number](items []T, searchItem T) int {
 	for i, item := range items {
 		if item == searchItem {
 			return i
@@ -11,7 +15,7 @@ func LinearSearch(items []int, searchItem int) int {
 }
 
 // BinarySearch searches an item using binary search algorithm
-func BinarySearch(sortedItems []int, searchItem int) int {
+func BinarySearch[T Number](sortedItems []T, searchItem T) int {
 	middleIndex := len(sortedItems) / 2
 	middleItem := sortedItems[middleIndex]
 	if searchItem == middleItem {
